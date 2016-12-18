@@ -27,8 +27,11 @@ app.listen(3000, function(err) {
 ```
 但是，只有上面的代码，运行 node server.js ，即使有一个 index.html 跟 server.js 放在同级位置，也会报错的：
 
+```
 TypeError: path must be absolute or specify root to res.sendFile
    at ServerResponse.sendFile (/home/newming/桌面/peter/router-
+```
+
 添加这些代码
 ```js
 app.use(express.static('public'));
